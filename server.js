@@ -20,10 +20,18 @@ app.get('/', (request, response) => {
 
 app.get('/weather', (request, response) => {
   try {
-  let city = request.query.city_name; // this is our search query
-  let cityObject = data.find(localCity => localCity.city_name === city);
-  let cityForcast = new Forcast(cityObject);
-  response.send(cityForcast); // weather data api
+  let city = request.query.city_name; // this is our search query  
+  if (city){
+    let cityObject = data.find(localCity => localCity.city_name === city);
+    let cityForcast = new Forcast(cityObject);
+    response.send(cityForcast); // weather data api
+  } else {
+    let lat = request.query.lat;
+    let lon = request.query.lon;
+    let cityObject = data.find(localCity => localCity.lat === lat && localCity.lon === lon);
+    let cityForcast = new Forcast(cityObject);
+    response.send(cityForcast);
+  }
   } catch(error){
     console.log(error);
   }
