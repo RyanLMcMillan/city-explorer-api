@@ -2,7 +2,7 @@
 const { default: axios } = require('axios');
  
 async function getMovies (request, response)  {
-  console.log('getMovies')  
+  // console.log('getMovies')  
   try {
     let keyword = request.query.keyword; // this is our search query 
     // console.log(movieQuery);
@@ -13,10 +13,10 @@ async function getMovies (request, response)  {
     let actualData = movieGrabData.data.results;
     // console.log(actualData);
     let movieArray = [];
-    console.log(movieArray);
+    // console.log(movieArray);
     for (let i = 0; i < actualData.length; i++){
       movieArray.push(new Movie(actualData[i]));
-    } console.log(movieArray)
+    } // console.log(movieArray)
     response.send(movieArray);
   } catch (error) {
     console.log(error);
