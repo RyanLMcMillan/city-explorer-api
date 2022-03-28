@@ -10,6 +10,8 @@ Finish time: 9pm
 
 Actual time needed to complete: 7 + more to come 
 
+
+
 Name of feature: Weatherbit functionality/Movie database day08
 
 Estimate of time needed to complete: 5 hours
@@ -20,6 +22,8 @@ Finish time: 8:30
 
 Actual time needed to complete: 6 hours and more to come
 
+
+
 Name of feature: Movie database day9
 
 Estimate of time needed to complete: 5 hours
@@ -29,3 +33,6 @@ Start time: 1:30 pm
 Finish time: 8:30
 
 Actual time needed to complete: 7 hours and a lot css needed as well as connection to heroku
+
+
+![WhiteBoard](Whiteboard.png)
